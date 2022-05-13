@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Account - RedStore</title>
+<link rel="stylesheet" href="" th:href="@{/css/styles.css}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+	
+	<!-- Header Section starts -->
+	<header th:replace="header::header1"></header>
+	<!-- Header Section ends -->
+	
+	<!-- ------Account page starts-------------- -->
+	
+	<div class="account-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<img src="" th:src="@{/images/image1.png}" width="100%"  alt="" />
+				</div>
+				<div class="col-2">
+					<div class="form-container">
+						<div class="form-btn">
+							<a href="" th:href="@{/login}"><span>Login</span></a>
+							
+							<a href="" th:href="@{/login}"><span>Register</span></a>
+							<hr id="indicator1"/>
+						</div>
+			
+					<!-- 	<form action="" id="loginform">
+							<input type="text"  placeholder="Username"/>
+							<input type="password"  placeholder="Password"/>
+							<button type="submit" class="btn">Login</button>
+							<a href="">Forgot password</a>
+						</form>  -->
+						
+						
+					
+			
+						<form th:action="@{/registerform}" method="post"  id="registerform" style="margin-top: -50px;">
+							<input type="text"  placeholder="Username" name="username" required/>
+							<input type="email" placeholder="Email" name="email" required />
+							<input type="password"  placeholder="Password" name="password" required />
+							<input type="text"  placeholder="Phone Number" name="phone" required />
+							<input type="text"  placeholder="Address" name="address" required />
+							<button type="submit" class="btn">Register</button>
+						</form> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- ------Account page starts-------------- -->
+	
+	<!-- Footer starts  -->
+	<footer th:replace="footer::footer1"></footer>
+	<!--Footer ends  -->
+
+
+
+</body>
+</html>

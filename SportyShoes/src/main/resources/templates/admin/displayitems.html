@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Display Items</title>
+<link rel="stylesheet" href="" th:href="@{/css/styles.css}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css}"/>
+</head>
+<body>
+
+	<!-- Header Section starts -->
+	<header th:replace="header::header1"></header>
+	<!-- Header Section ends -->
+	
+	<h1>Display all items</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Item Id</th>
+				<th>Item Name</th>
+				<th>For Gender</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr th:each="n:${display}" style="padding: 5px; border: solid red 2px;">
+
+				<td th:text="${n.itemId}"></td>
+				<td th:text="${n.itemName}"></td>
+				<td th:text="${n.forGender}"></td>
+				<td th:text="${n.price}"></td>
+				<td><img src="" th:src="@{${'/images/'+n.image}}" style="width:50%;" /></td>
+				
+			</tr>
+		</tbody>
+	</table>
+	
+	<!-- Footer starts  -->
+	<footer th:replace="footer::footer1"></footer>
+	<!--Footer ends  -->
+	
+</body>
+</html>

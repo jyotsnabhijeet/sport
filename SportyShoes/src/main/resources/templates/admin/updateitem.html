@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <h1>This is update item page</h1>
+ 
+ 	
+ 	<form action="" th:action="@{/editsuccess}">
+ 		<div>
+ 		<label>Item Id</label>
+ 		<input type="number" name="itemId" value="" th:value="${itemId}" readonly/>
+ 		</div>
+ 		<div>
+ 		<label>Item Name</label>
+ 		<input type="text" name="itemName" value="" th:value="${itemName}" />
+ 		</div>
+ 		<div>
+		<label>Gender Category</label>
+		<select name="forGender"  required>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+		</div>
+		<div>
+		<label>Price</label>
+		<input type="number" name="price" placeholder="Enter Item Price" value="" th:value="${price}" required/>
+		</div>
+		
+		<button type="submit">Submit</button>
+		
+ 	</form>
+ 	
+</body>
+</html>

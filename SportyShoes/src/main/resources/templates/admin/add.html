@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Items</title>
+<link rel="stylesheet" href="" th:href="@{/css/styles.css}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+
+	<!-- Header Section starts -->
+	<header th:replace="header::header1"></header>
+	<!-- Header Section ends -->
+
+	
+	
+	<div class="account-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<img src="" th:src="@{/images/image1.png}" width="100%"  alt="" />
+				</div>
+				<h1 style="display: absolute; margin-top: -50%; margin-left: -50%; Font-family: Baskerville, Baskerville Old Face, Garamond, Times New Roman, serif; ">Welcome to Add Item Page</h1>
+				<div class="col-2">
+					<div class="form-container">
+						<div class="form-btn">
+							<span>Add Item</span>
+							<hr id="indicator2"/>
+						</div>
+	
+	<form action="#" th:action="@{/addinput}" method="post" enctype="multipart/form-data">
+		
+		<input type="text" name="itemName" placeholder="Enter Item Name" required/>
+		
+		<div>
+		<label>Select Gender Category</label>
+		<select name="forGender" required>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+		</div>
+		<div>
+		
+		<input type="number" name="price" placeholder="Enter Item Price" required/>
+		</div>
+		<div>
+			<input type="file" name="imag"  required/>
+		
+		</div>
+		<div>
+			<button type="submit" class="btn">Add Item</button>
+		</div>
+	
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	
+	<!-- Footer starts  -->
+	<footer th:replace="footer::footer1"></footer>
+	<!--Footer ends  -->
+	
+</body>
+</html>

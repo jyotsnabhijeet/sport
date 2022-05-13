@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>All Products - RedStore</title>
+<link rel="stylesheet" href="" th:href="@{/css/styles.css}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css}"/>
+</head>
+<body>
+	
+	<!-- Header Section starts -->
+	<header th:replace="header::header1"></header>
+	<!-- Header Section ends -->
+	
+	<!-- Products -->
+		<div class="small-container">
+			<div class="row-2">
+				<h2>All Products</h2>
+			</div>	
+			<div class="row">
+				<div class="col-4" th:each="n:${display}">
+					<a href="" th:href="@{/product-details}"><img src="" th:src="@{${'/images/'+n.image}}" alt="" />
+					<h4 th:text="${n.itemName}"></h4></a>
+					<div class="rating">
+							<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						
+					</div>
+					<p th:text="${'Price: '+n.price}"></p>
+				</div>
+					
+				</div>
+					
+			</div>
+			
+				
+			
+		
+		<!--Products section ends  -->
+		
+	<!-- Footer starts  -->
+	<footer th:replace="footer::footer1"></footer>
+	<!--Footer ends  -->
+	
+</body>
+</html>
